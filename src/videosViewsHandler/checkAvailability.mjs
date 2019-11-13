@@ -1,3 +1,4 @@
+import consoleMessage from '../../utils/consoleMessage.mjs';
 
 export default async function checkAvailability(page, playvideoBtn) {
     try {

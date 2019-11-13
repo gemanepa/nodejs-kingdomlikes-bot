@@ -1,4 +1,5 @@
 import consoleMessage from '../../utils/consoleMessage.mjs';
+import terminateApp from '../terminateApp.mjs';
 
 export default function noPointsFoundTolerance(noPointsFound) {
     if(noPointsFound > 4) {
