@@ -1,8 +1,9 @@
 import consoleMessage from '../../utils/consoleMessage.mjs';
 
 export default async function navigatingHome(page, selectors) {
+    consoleMessage('header', 'NAVIGATING HOME', true)
     const { ytviewsBtn } = selectors;
-    consoleMessage('log', 'Entered kingdomlikes home page', true)
+    consoleMessage('info', 'Entered kingdomlikes home page')
     await page.waitForSelector(ytviewsBtn)
-    consoleMessage('log', 'Waiting for DOM Loading finished')
+    consoleMessage('info', 'Waiting for DOM Loading finished')
   }

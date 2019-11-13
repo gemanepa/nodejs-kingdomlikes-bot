@@ -1,15 +1,16 @@
 {
   "name": "nodejs-kingdomlikes-bot",
+  "author": "gemanepa <contacto@gemanepa.com>",
   "version": "1.0.0",
   "type": "module",
   "description": "KingdomLikes bot made with Node.js and Puppeteer",
   "main": "kibot.mjs",
   "repository": "https://github.com/gemanepa/nodejs-kingdomlikes-bot.git",
-  "author": "gemanepa <contacto@gemanepa.com>",
   "scripts": {
     "start": "node --experimental-modules kibot.mjs"
   },
   "dependencies": {
+    "chalk": "latest",
     "dotenv": "latest",
     "puppeteer": "latest"
   }

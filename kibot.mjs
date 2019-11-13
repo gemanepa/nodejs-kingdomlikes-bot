@@ -10,6 +10,8 @@ import navigatingYtviews from './src/pagesNav/ytviews.mjs'
 dotenv.config();
 
 (async () => {
+  startingAppLogs();
+
   const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
   
@@ -29,6 +31,13 @@ dotenv.config();
 
 })();
 
+function startingAppLogs(){
+  consoleMessage('intro', 'KINGDOMLIKES BOT', true)
+  consoleMessage('intro', 'Any issue or improvement idea to report?')
+  consoleMessage('intro', '--> github.com/gemanepa/nodejs-kingdomlikes-bot')
+  consoleMessage('intro', 'Starting...')
+}
+
 
 
 
@@ -36,6 +45,7 @@ dotenv.config();
 
 
 async function videosViewsHandler(page, selectors) {
+  consoleMessage('header', 'VIDEOS VIEWS HANDLER', true)
   const { playvideoBtn } = selectors;
   let videoNumber = 0;
   let noPointsFound = 0;
@@ -47,19 +57,20 @@ async function videosViewsHandler(page, selectors) {
       const isDisabled = await page.$('button.blue[disabled]') === null;
     
       if(isDisabled) {
+        consoleMessage('header', 'Handling new video...')
         videoNumber += 1;
-        consoleMessage('log', `Clicking on youtube video number ${videoNumber}`, true)
+        consoleMessage('info', `Clicking on youtube video number ${videoNumber}`)
   
         const vdName = await getVideoName(page)
-        consoleMessage('log', `----> Video Name: ${vdName ? vdName : 'No name'}`)
+        consoleMessage('info', `----> Video Name: ${vdName ? vdName : 'No name'}`)
   
         const vdPoints = await getVideoPoints(page)
         if (vdPoints) {
           noPointsFound = 0;
-          consoleMessage('log', `----> Video Points: ${vdPoints}`)
+          consoleMessage('info', `----> Video Points: ${vdPoints}`)
   
           await page.click(playvideoBtn)
-          consoleMessage('log', 'Playing video for 1:40 minutes')
+          consoleMessage('info', 'Playing video for 1:40 minutes')
         } else { 
           noPointsFound += 1;
           noPointsFoundTolerance(noPointsFound)
@@ -104,13 +115,13 @@ async function getVideoName(page) {
   } catch { return false }
 }
 
-function navigationFailure(page) {
-  consoleMessage('error', `Navigation error in ${page}`)
+function navigationFailure(pageName) {
+  consoleMessage('error', `Navigation error in ${pageName}`)
   terminateApp()
 }
 
 function terminateApp(){
-  consoleMessage('log', 'Stopping application')
+  consoleMessage('info', 'Stopping application')
   process.exit()
 }
 
