@@ -1,0 +1,17 @@
+{
+  "login": {
+    "emailField": "#formlogin > .row > input[type=\"email\"]",
+    "passField": "#formlogin > .row > input[type=\"password\"]",
+    "submitBtn": "#formlogin > .row > input[type=\"submit\"]"
+  },
+  "home": {
+    "ytviewsBtn": "#principalcontent"
+  },
+  "ytviews": {
+    "container": ".pagecontent > .container",
+    "videoName": "containertitle > h6",
+    "videoPoints": "containertitle > h5 > span.redfont",
+    "playvideoBtn": "button.blue",
+    "dbplayvideoBtn": "button.blue[disabled]"
+  }
+}
