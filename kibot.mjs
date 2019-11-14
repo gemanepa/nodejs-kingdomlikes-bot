@@ -17,7 +17,7 @@ dotenv.config();
 
 (async () => {
 
-  const page = await initiateApp({headless: false});
+  const page = await initiateApp({headless: true});
   
   try {
     await navigatingLogin(page, selectors.login)
