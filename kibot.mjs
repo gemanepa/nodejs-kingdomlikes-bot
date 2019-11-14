@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 
+import headless from './settings/headless.json'
 import selectors from './settings/selectors.json';
 import consoleMessage from './utils/consoleMessage.mjs';
 
@@ -17,7 +18,7 @@ dotenv.config();
 
 (async () => {
 
-  const page = await initiateApp({headless: true});
+  const page = await initiateApp(headless);
   
   try {
     await navigatingLogin(page, selectors.login)
