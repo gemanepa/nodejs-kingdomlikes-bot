@@ -3,11 +3,14 @@
   "author": "gemanepa <contacto@gemanepa.com>",
   "version": "1.0.0",
   "type": "module",
+  "safestart":"node --experimental-modules kibot.mjs",
   "description": "KingdomLikes bot made with Node.js and Puppeteer",
   "main": "kibot.mjs",
   "repository": "https://github.com/gemanepa/nodejs-kingdomlikes-bot.git",
   "scripts": {
-    "start": "node --experimental-modules kibot.mjs"
+    "start": "node --experimental-modules kibot.mjs",
+    "monitor:start": "pm2 start node --name kibot --exp-backoff-restart-delay=10000 -- --experimental-modules kibot.mjs && pm2 monit kibot",
+    "monitor:stop": "pm2 stop kibot"
   },
   "dependencies": {
     "chalk": "latest",
