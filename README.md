@@ -3,8 +3,11 @@
 
 This KingdomLikes Bot will authenticate and login into your account, then go to the youtube views section where it will open by itself all the available videos, given you free points automatically
 
-When there are no more videos, the bot will sleep for 5 minutes.
-In case of an unexpected crashing for some not considered reason, the bot will automatically restart itself
+When there are no more videos, the bot will sleep for 5 minutes. 
+
+The bot can run monitored (with automatic restart) or unmonitored (without automatic restart). 
+
+If there are no videos for 5 continuous sleep rounds and the bot is running unmonitored, it will purposely shut down, otherwise it will keep running, restarting itself in case of an unexpected crashing
 
 ## Software PreRequisites
 * NodeJS v12 or higher https://nodejs.org/es/download/current/
