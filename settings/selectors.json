@@ -12,6 +12,7 @@
     "videoName": "containertitle > h6",
     "videoPoints": "containertitle > h5 > span.redfont",
     "playvideoBtn": "button.blue",
-    "dbplayvideoBtn": "button.blue[disabled]"
+    "dbplayvideoBtn": "button.blue[disabled]",
+    "userPoints": "#divpoints > h4 > #points"
   }
 }

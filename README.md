@@ -25,7 +25,7 @@ The bot can run monitored (with automatic restart) or unmonitored (without autom
 
 ## Config
 
-Create a .env file with the EMAIL and PASSWORD of the account.
+Create a .env file with the EMAIL and PASSWORD of the account. Modify settings/headless boolean 'true' value for 'false' if you want to see the browser
 
 ![](https://i.imgur.com/ZAGSKXK.png)
 
