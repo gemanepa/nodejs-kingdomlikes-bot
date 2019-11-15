@@ -2,7 +2,6 @@ import dotenv from 'dotenv';
 
 import headless from './settings/headless.json'
 import selectors from './settings/selectors.json';
-import consoleMessage from './utils/consoleMessage.mjs';
 
 import initiateApp from './src/initiateApp.mjs';
 

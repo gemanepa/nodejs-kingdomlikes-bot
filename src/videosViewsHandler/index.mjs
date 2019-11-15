@@ -1,12 +1,13 @@
 import consoleMessage from '../../utils/consoleMessage.mjs';
 import checkAvailability from './checkAvailability';
+import getUserPoints from './getUserPoints';
 import getVideoName from './getVideoName';
 import getVideoPoints from './getVideoPoints';
 import noPointsFoundTolerance from './noPointsFoundTolerance';
 
 export default async function videosViewsHandler(page, selectors) {
     consoleMessage('header', 'VIDEOS VIEWS HANDLER', true)
-    const { playvideoBtn } = selectors;
+    const { playvideoBtn, userPoints } = selectors;
 
   
     let sleepForFiveMins = await checkAvailability(page, playvideoBtn) ? false : new Date(rightnow.getTime() + 10*60000); 
@@ -21,6 +22,8 @@ export default async function videosViewsHandler(page, selectors) {
         const btnNotDisabled = await page.$('button.blue[disabled]') === null;
       
         if(btnNotDisabled) {
+          const userPnts = await getUserPoints(page, userPoints)
+          consoleMessage('info', `User Points: ${userPnts}`)
           consoleMessage('header', 'Handling new video...')
 
           videoNumber += 1;
