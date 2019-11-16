@@ -7,7 +7,7 @@
 
   
 
-This KingdomLikes Bot will authenticate and login into your account, then go to the youtube views section where it will open by itself all the available videos, given you free points automatically. When there are no more videos, the bot will sleep for 10 minutes.
+KingdomLikes Bot  that logins into an account and then goes to the youtube views section where it opens and watch by itself all the available videos individually, given you free points automatically. When there are no more videos, the bot will sleep for 10 minutes.
 
   
 
