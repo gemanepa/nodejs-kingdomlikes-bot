@@ -3,7 +3,7 @@
   "author": "gemanepa <contacto@gemanepa.com>",
   "version": "1.0.0",
   "type": "module",
-  "safestart":"node --experimental-modules kibot.mjs",
+  "safestart": "node --experimental-modules kibot.mjs",
   "description": "KingdomLikes bot made with Node.js and Puppeteer",
   "main": "kibot.mjs",
   "repository": "https://github.com/gemanepa/nodejs-kingdomlikes-bot.git",

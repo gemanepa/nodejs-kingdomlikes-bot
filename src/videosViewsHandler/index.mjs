@@ -8,15 +8,17 @@ import noPointsFoundTolerance from './noPointsFoundTolerance';
 export default async function videosViewsHandler(page, selectors) {
     consoleMessage('header', 'VIDEOS VIEWS HANDLER', true)
     const { playvideoBtn, userPoints } = selectors;
+    let rightnow = new Date();
 
-  
-    let sleepForFiveMins = await checkAvailability(page, playvideoBtn) ? false : new Date(rightnow.getTime() + 10*60000); 
+    let isThereAVideo = await checkAvailability(page, playvideoBtn);
+    let sleepForFiveMins = isThereAVideo ? false : new Date(rightnow.getTime() + 10*60000); 
+
 
     let videoNumber = 0;
     let noPointsFound = 0;
     
     setInterval(async function() {
-      const rightnow = new Date();
+      rightnow = new Date();
       if(!sleepForFiveMins || (sleepForFiveMins && rightnow > sleepForFiveMins)) {
         
         const btnNotDisabled = await page.$('button.blue[disabled]') === null;

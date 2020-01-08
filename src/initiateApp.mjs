@@ -7,7 +7,10 @@ export default async function initiateApp(headless){
     consoleMessage('intro', '--> github.com/gemanepa/nodejs-kingdomlikes-bot')
     consoleMessage('intro', 'Starting...')
   
-    const browser = await puppeteer.launch(headless);
+    const browser = await puppeteer.launch({
+        headless,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      });
     const page = await browser.newPage();
     return page
 }
