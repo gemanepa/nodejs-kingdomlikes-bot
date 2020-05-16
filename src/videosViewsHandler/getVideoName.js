@@ -1,5 +1,7 @@
-export default async function getVideoName(page) {
+async function getVideoName(page) {
     try {
       return await page.$eval('.containertitle > h6', el => el.innerHTML);
     } catch { return false }
 }
+
+module.exports = getVideoName

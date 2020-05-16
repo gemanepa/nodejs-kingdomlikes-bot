@@ -1,7 +1,7 @@
-import puppeteer from 'puppeteer';
-import consoleMessage from '../utils/consoleMessage';
+const puppeteer = require('puppeteer');
+const consoleMessage = require('../utils/consoleMessage');
 
-export default async function initiateApp(headless){
+async function initiateApp(headless){
     consoleMessage('intro', 'KINGDOMLIKES BOT', true)
     consoleMessage('intro', 'Any issue or improvement idea to report?')
     consoleMessage('intro', '--> github.com/gemanepa/nodejs-kingdomlikes-bot')
@@ -14,3 +14,5 @@ export default async function initiateApp(headless){
     const page = await browser.newPage();
     return page
 }
+
+module.exports = initiateApp

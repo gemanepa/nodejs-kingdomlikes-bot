@@ -1,5 +1,7 @@
-export default async function getVideoPoints(page) {
+async function getVideoPoints(page) {
     try {
       return await page.$eval('.containertitle > h5 > span', el => el.innerHTML);
     } catch { return false }
 }
+
+module.exports = getVideoPoints

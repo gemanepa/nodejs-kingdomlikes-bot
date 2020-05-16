@@ -1,11 +1,11 @@
-import consoleMessage from '../../utils/consoleMessage.mjs';
-import checkAvailability from './checkAvailability';
-import getUserPoints from './getUserPoints';
-import getVideoName from './getVideoName';
-import getVideoPoints from './getVideoPoints';
-import noPointsFoundTolerance from './noPointsFoundTolerance';
+const consoleMessage = require('../../utils/consoleMessage.js');
+const checkAvailability = require('./checkAvailability');
+const getUserPoints = require('./getUserPoints');
+const getVideoName = require('./getVideoName');
+const getVideoPoints = require('./getVideoPoints');
+const noPointsFoundTolerance = require('./noPointsFoundTolerance');
 
-export default async function videosViewsHandler(page, selectors) {
+async function videosViewsHandler(page, selectors) {
     consoleMessage('header', 'VIDEOS VIEWS HANDLER', true)
     const { playvideoBtn, userPoints } = selectors;
     let rightnow = new Date();
@@ -55,3 +55,5 @@ export default async function videosViewsHandler(page, selectors) {
       }
     }, 20000);
 }
+
+module.exports = videosViewsHandler

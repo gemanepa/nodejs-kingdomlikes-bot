@@ -1,6 +1,6 @@
-import consoleMessage from '../../utils/consoleMessage.mjs';
+const consoleMessage = require('../../utils/consoleMessage.js');
 
-export default async function navigatingLogin(page, selectors) {
+async function navigatingLogin(page, selectors) {
     consoleMessage('header', 'NAVIGATING LOGIN', true)
 
     const { emailField, passField, submitBtn } = selectors;
@@ -13,3 +13,5 @@ export default async function navigatingLogin(page, selectors) {
     consoleMessage('info', 'Submitting...')
     await page.click(submitBtn)
 }
+
+module.exports = navigatingLogin
