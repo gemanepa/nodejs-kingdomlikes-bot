@@ -1,8 +1,8 @@
-const consoleMessage = require('../utils/consoleMessage');
+import consoleMessage from '../utils/consoleMessage.js';
 
 function terminateApp(){
     consoleMessage('info', 'Stopping application')
     process.exit()
 }
 
-module.exports = terminateApp
+export default terminateApp

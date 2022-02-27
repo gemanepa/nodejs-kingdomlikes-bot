@@ -1,4 +1,4 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
+import consoleMessage from '../../utils/consoleMessage.js';
 
 async function navigatingHome(page, selectors) {
   consoleMessage('header', 'NAVIGATING HOME', true)
@@ -8,4 +8,4 @@ async function navigatingHome(page, selectors) {
   consoleMessage('info', 'Waiting for DOM Loading finished')
 }
 
-module.exports = navigatingHome
+export default navigatingHome

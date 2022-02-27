@@ -1,19 +1,19 @@
-const dotenv = require('dotenv');
+import { config } from 'dotenv';
 
-const headless = require('./settings/headless.json')
-const selectors = require('./settings/selectors.json')
+import headless from './settings/headless.json';
+import selectors from './settings/selectors.json';
 
-const initiateApp = require('./src/initiateApp.js');
-const navigatingLogin = require('./src/pagesNav/login.js');
-const navigatingHome = require('./src/pagesNav/home.js');
-const navigatingYtviews = require('./src/pagesNav/ytviews.js');
-const navigationFailure = require('./src/pagesNav/navigationFailure.js');
+import initiateApp from './src/initiateApp.js';
+import navigatingLogin from './src/pagesNav/login.js';
+import navigatingHome from './src/pagesNav/home.js';
+import navigatingYtviews from './src/pagesNav/ytviews.js';
+import navigationFailure from './src/pagesNav/navigationFailure.js';
 
-const videosViewsHandler = require('./src/videosViewsHandler/index.js')
+import videosViewsHandler from './src/videosViewsHandler/index.js';
 
 
 
-dotenv.config();
+config();
 
 (async () => {
 

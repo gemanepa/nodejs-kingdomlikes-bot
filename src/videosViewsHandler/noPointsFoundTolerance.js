@@ -1,5 +1,5 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
-const terminateApp = require('../terminateApp.js');
+import consoleMessage from '../../utils/consoleMessage.js';
+import terminateApp from '../terminateApp.js';
 
 function noPointsFoundTolerance(noPointsFound) {
   if(noPointsFound > 4) {
@@ -8,4 +8,4 @@ function noPointsFoundTolerance(noPointsFound) {
   }
 }
 
-module.exports = noPointsFoundTolerance
+export default noPointsFoundTolerance

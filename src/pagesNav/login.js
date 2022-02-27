@@ -1,4 +1,4 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
+import consoleMessage from '../../utils/consoleMessage.js';
 
 async function navigatingLogin(page, selectors) {
     consoleMessage('header', 'NAVIGATING LOGIN', true)
@@ -14,4 +14,4 @@ async function navigatingLogin(page, selectors) {
     await page.click(submitBtn)
 }
 
-module.exports = navigatingLogin
+export default navigatingLogin

@@ -1,4 +1,4 @@
-const chalk = require('chalk');
+import chalk from 'chalk';
 const log = console.log;
 
 /* consoleMessage: Logs with date the stuff that's happening 
@@ -24,4 +24,4 @@ function consoleMessage(type, message, linebreak){
 
 }
 
-module.exports = consoleMessage
+export default consoleMessage

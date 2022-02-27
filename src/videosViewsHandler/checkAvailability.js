@@ -1,4 +1,4 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
+import consoleMessage from '../../utils/consoleMessage.js';
 
 async function checkAvailability(page, playvideoBtn) {
   try {
@@ -14,4 +14,4 @@ async function checkAvailability(page, playvideoBtn) {
     }
 }
 
-module.exports = checkAvailability
+export default checkAvailability

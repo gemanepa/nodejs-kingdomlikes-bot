@@ -1,5 +1,5 @@
-const puppeteer = require('puppeteer');
-const consoleMessage = require('../utils/consoleMessage');
+import puppeteer from 'puppeteer';
+import consoleMessage from '../utils/consoleMessage.js';
 
 async function initiateApp(headless){
     consoleMessage('intro', 'KINGDOMLIKES BOT', true)
@@ -8,11 +8,11 @@ async function initiateApp(headless){
     consoleMessage('intro', 'Starting...')
   
     const browser = await puppeteer.launch({
-        headless,
+        headless: false,
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
       });
     const page = await browser.newPage();
     return page
 }
 
-module.exports = initiateApp
+export default initiateApp

@@ -5,4 +5,4 @@ async function getUserPoints(page, selector) {
       } catch { return false }
 }
 
-module.exports = getUserPoints
+export default getUserPoints

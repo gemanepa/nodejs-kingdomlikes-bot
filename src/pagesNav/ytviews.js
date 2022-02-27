@@ -1,4 +1,4 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
+import consoleMessage from '../../utils/consoleMessage.js';
 
 async function navigatingYtviews(page) {
   consoleMessage('header', 'NAVIGATING YOUTUBE VIEWS', true)
@@ -6,4 +6,4 @@ async function navigatingYtviews(page) {
   consoleMessage('info', 'Entered kingdomlikes youtubeviews page')
 }
 
-module.exports = navigatingYtviews
+export default navigatingYtviews

@@ -4,4 +4,4 @@ async function getVideoPoints(page) {
     } catch { return false }
 }
 
-module.exports = getVideoPoints
+export default getVideoPoints

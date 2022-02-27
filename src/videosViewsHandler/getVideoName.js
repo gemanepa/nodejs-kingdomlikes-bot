@@ -4,4 +4,4 @@ async function getVideoName(page) {
     } catch { return false }
 }
 
-module.exports = getVideoName
+export default getVideoName

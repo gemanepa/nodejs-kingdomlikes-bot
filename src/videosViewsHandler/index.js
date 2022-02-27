@@ -1,9 +1,9 @@
-const consoleMessage = require('../../utils/consoleMessage.js');
-const checkAvailability = require('./checkAvailability');
-const getUserPoints = require('./getUserPoints');
-const getVideoName = require('./getVideoName');
-const getVideoPoints = require('./getVideoPoints');
-const noPointsFoundTolerance = require('./noPointsFoundTolerance');
+import consoleMessage from '../../utils/consoleMessage.js';
+import checkAvailability from './checkAvailability.js';
+import getUserPoints from './getUserPoints.js';
+import getVideoName from './getVideoName.js';
+import getVideoPoints from './getVideoPoints.js';
+import noPointsFoundTolerance from './noPointsFoundTolerance.js';
 
 async function videosViewsHandler(page, selectors) {
     consoleMessage('header', 'VIDEOS VIEWS HANDLER', true)
@@ -56,4 +56,4 @@ async function videosViewsHandler(page, selectors) {
     }, 20000);
 }
 
-module.exports = videosViewsHandler
+export default videosViewsHandler
