@@ -1,5 +1,6 @@
+# NodeJS + Puppeteer KingdomLikes Bot [DEPRECATED]
 
-# NodeJS + Puppeteer KingdomLikes Bot
+**DEPRECATED**: KingdomLikes introduced a very narrow daily youtube views limit to force diversification and avoid users earning a lot of points through bots like this one
 
 ![](https://i.imgur.com/g27m6M8.png)
 
